@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WorkOrderForSelectionDataSet" targetNamespace="http://tempuri.org/WorkOrderForSelectionDataSet.xsd" xmlns:mstns="http://tempuri.org/WorkOrderForSelectionDataSet.xsd" xmlns="http://tempuri.org/WorkOrderForSelectionDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WorkOrderForSelectionDataSet" msdata:IsDataSet="true" msdata:CaseSensitive="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WorkOrderForSelectionDataSet" msprop:Generator_UserDSName="WorkOrderForSelectionDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="workorders" msprop:Generator_TableClassName="workordersDataTable" msprop:Generator_TableVarName="tableworkorders" msprop:Generator_TablePropName="workorders" msprop:Generator_RowDeletingName="workordersRowDeleting" msprop:Generator_RowChangingName="workordersRowChanging" msprop:Generator_RowEvHandlerName="workordersRowChangeEventHandler" msprop:Generator_RowDeletedName="workordersRowDeleted" msprop:Generator_UserTableName="workorders" msprop:Generator_RowChangedName="workordersRowChanged" msprop:Generator_RowEvArgName="workordersRowChangeEvent" msprop:Generator_RowClassName="workordersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
+              <xs:element name="WorkOrderNumber" msprop:Generator_ColumnVarNameInTable="columnWorkOrderNumber" msprop:Generator_ColumnPropNameInRow="WorkOrderNumber" msprop:Generator_ColumnPropNameInTable="WorkOrderNumberColumn" msprop:Generator_UserColumnName="WorkOrderNumber" type="xs:string" />
+              <xs:element name="AccountNumber" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_UserColumnName="AccountNumber" type="xs:string" />
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" type="xs:string" />
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" type="xs:string" />
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_UserColumnName="PhoneNumber" type="xs:string" />
+              <xs:element name="StreetAddress" msprop:Generator_ColumnVarNameInTable="columnStreetAddress" msprop:Generator_ColumnPropNameInRow="StreetAddress" msprop:Generator_ColumnPropNameInTable="StreetAddressColumn" msprop:Generator_UserColumnName="StreetAddress" type="xs:string" />
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City" type="xs:string" />
+              <xs:element name="DateScheduled" msprop:Generator_ColumnVarNameInTable="columnDateScheduled" msprop:Generator_ColumnPropNameInRow="DateScheduled" msprop:Generator_ColumnPropNameInTable="DateScheduledColumn" msprop:Generator_UserColumnName="DateScheduled" type="xs:dateTime" />
+              <xs:element name="WorkOrderStatus" msprop:Generator_ColumnVarNameInTable="columnWorkOrderStatus" msprop:Generator_ColumnPropNameInRow="WorkOrderStatus" msprop:Generator_ColumnPropNameInTable="WorkOrderStatusColumn" msprop:Generator_UserColumnName="WorkOrderStatus" type="xs:string" />
+              <xs:element name="WorkType" msprop:Generator_ColumnVarNameInTable="columnWorkType" msprop:Generator_ColumnPropNameInRow="WorkType" msprop:Generator_ColumnPropNameInTable="WorkTypeColumn" msprop:Generator_UserColumnName="WorkType" type="xs:string" />
+              <xs:element name="ZoneLocation" msprop:Generator_ColumnVarNameInTable="columnZoneLocation" msprop:Generator_ColumnPropNameInRow="ZoneLocation" msprop:Generator_ColumnPropNameInTable="ZoneLocationColumn" msprop:Generator_UserColumnName="ZoneLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressID" msprop:Generator_ColumnVarNameInTable="columnAddressID" msprop:Generator_ColumnPropNameInRow="AddressID" msprop:Generator_ColumnPropNameInTable="AddressIDColumn" msprop:Generator_UserColumnName="AddressID" type="xs:int" />
+              <xs:element name="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
+              <xs:element name="WorkOrderID" msprop:Generator_ColumnVarNameInTable="columnWorkOrderID" msprop:Generator_ColumnPropNameInRow="WorkOrderID" msprop:Generator_ColumnPropNameInTable="WorkOrderIDColumn" msprop:Generator_UserColumnName="WorkOrderID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

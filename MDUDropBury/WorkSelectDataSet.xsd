@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WorkSelectDataSet" targetNamespace="http://tempuri.org/WorkSelectDataSet.xsd" xmlns:mstns="http://tempuri.org/WorkSelectDataSet.xsd" xmlns="http://tempuri.org/WorkSelectDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WorkSelectDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WorkSelectDataSet" msprop:Generator_UserDSName="WorkSelectDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="work" msprop:Generator_TableClassName="workDataTable" msprop:Generator_TableVarName="tablework" msprop:Generator_RowChangedName="workRowChanged" msprop:Generator_TablePropName="work" msprop:Generator_RowDeletingName="workRowDeleting" msprop:Generator_RowChangingName="workRowChanging" msprop:Generator_RowEvHandlerName="workRowChangeEventHandler" msprop:Generator_RowDeletedName="workRowDeleted" msprop:Generator_RowClassName="workRow" msprop:Generator_UserTableName="work" msprop:Generator_RowEvArgName="workRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WorkOrderID" msprop:Generator_ColumnVarNameInTable="columnWorkOrderID" msprop:Generator_ColumnPropNameInRow="WorkOrderID" msprop:Generator_ColumnPropNameInTable="WorkOrderIDColumn" msprop:Generator_UserColumnName="WorkOrderID" type="xs:int" />
+              <xs:element name="WorkOrderNumber" msprop:Generator_ColumnVarNameInTable="columnWorkOrderNumber" msprop:Generator_ColumnPropNameInRow="WorkOrderNumber" msprop:Generator_ColumnPropNameInTable="WorkOrderNumberColumn" msprop:Generator_UserColumnName="WorkOrderNumber" type="xs:string" />
+              <xs:element name="AccountNumber" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_UserColumnName="AccountNumber" type="xs:string" />
+              <xs:element name="StreetAddress" msprop:Generator_ColumnVarNameInTable="columnStreetAddress" msprop:Generator_ColumnPropNameInRow="StreetAddress" msprop:Generator_ColumnPropNameInTable="StreetAddressColumn" msprop:Generator_UserColumnName="StreetAddress" type="xs:string" />
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_UserColumnName="PhoneNumber" type="xs:string" />
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City" type="xs:string" />
+              <xs:element name="DateScheduled" msprop:Generator_ColumnVarNameInTable="columnDateScheduled" msprop:Generator_ColumnPropNameInRow="DateScheduled" msprop:Generator_ColumnPropNameInTable="DateScheduledColumn" msprop:Generator_UserColumnName="DateScheduled" type="xs:dateTime" />
+              <xs:element name="ZoneLocation" msprop:Generator_ColumnVarNameInTable="columnZoneLocation" msprop:Generator_ColumnPropNameInRow="ZoneLocation" msprop:Generator_ColumnPropNameInTable="ZoneLocationColumn" msprop:Generator_UserColumnName="ZoneLocation" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:work" />
+      <xs:field xpath="mstns:WorkOrderID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

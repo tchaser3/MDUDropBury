@@ -1,0 +1,91 @@
+﻿<Window x:Class="MDUDropBury.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        xmlns:local="clr-namespace:MDUDropBury"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="450" Width="450">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#20232A" />
+            <Setter Property="Foreground" Value="#FFC9E0DC" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontFamily" Value="./#Segoe UI" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="4" Background="{TemplateBinding Background}">
+                            <Grid>
+                                <Path x:Name="PathIcon" Width="0" Height="0" Stretch="Fill" Fill="#4C87B3" HorizontalAlignment="Left" Margin="17,0,0,0" Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z "/>
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF635B5B" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter TargetName="PathIcon" Property="Fill" Value="Black" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="true">
+                                <Setter Property="Background" Value="#FF635B5B" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter TargetName="PathIcon" Property="Fill" Value="Black" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF981E2A" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="AliceBlue" Offset="0"/>
+                <GradientStop Color="RoyalBlue" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Height="23" VerticalAlignment="Top" Background="AliceBlue" MouseLeftButtonDown="Grid_MouseLeftButtonDown"/>
+        <Image HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="140" Margin="151,28,0,0" Stretch="Fill" Source="logo.png"/>
+        <Label x:Name="lblTitle" Content="MDU Drop Buries Main Menu" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Width="422"/>
+        <Button x:Name="btnClose" TabIndex="11" Content="Close" HorizontalAlignment="Left" Margin="300,365,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Click="btnClose_Click"/>
+        <Button x:Name="btnCreateWorkOrder" TabIndex="0" HorizontalAlignment="Left" Margin="18,156,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Click="btnCreateWorkOrder_Click">
+            <TextBlock x:Name="tblCreateWorkOrder" TextWrapping="Wrap" Text="Create Work Order" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="btnUpdateWorkOrder" TabIndex="1" HorizontalAlignment="Left" Margin="161,156,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Click="btnUpdateWorkOrder_Click">
+            <TextBlock x:Name="tblUpdateWorkOrder" TextWrapping="Wrap" Text="Update Work Order" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="btnViewOpenWorkOrders" TabIndex="3" HorizontalAlignment="Left" Margin="18,224,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Click="btnViewOpenWorkOrders_Click">
+            <TextBlock x:Name="tblViewOpenWorkOrders" TextWrapping="Wrap" Text="View Open Work Orders" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="btnViewScheduledWork" TabIndex="4" HorizontalAlignment="Left" Margin="161,224,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Click="btnViewScheduledWork_Click">
+            <TextBlock x:Name="tblViewScheduledWork" TextWrapping="Wrap" Text="Scheduled Work Orders" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="btnDropBuryBilling" TabIndex="5" HorizontalAlignment="Left" Margin="300,224,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18">
+            <TextBlock x:Name="tblDropBuryBilling" TextWrapping="Wrap" Text="Drop Bury Billing" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="btnMDUBilling" TabIndex="6" HorizontalAlignment="Left" Margin="18,295,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18">
+            <TextBlock x:Name="tblMDUBilling" TextWrapping="Wrap" Text="MDU Billing" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="btnReports" TabIndex="9" Content="Reports" HorizontalAlignment="Left" Margin="18,365,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18"/>
+        <Button x:Name="btnScheduleJob" TabIndex="2" HorizontalAlignment="Left" Margin="300,156,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Click="btnScheduleJob_Click">
+            <TextBlock x:Name="tblScheduleNewWork" TextWrapping="Wrap" Text="Schedule    New Work" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="btnCancelledOrders" TabIndex="7" HorizontalAlignment="Left" Margin="161,295,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Click="btnCancelledOrders_Click">
+            <TextBlock x:Name="tblCancelledOrders" TextWrapping="Wrap" Text="Cancelled Orders" TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="btnClosedOrders" TabIndex="8" HorizontalAlignment="Left" Margin="300,295,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Click="btnClosedOrders_Click">
+            <TextBlock x:Name="tblClosedOrders" TextWrapping="Wrap" Text="Closed Orders"/>
+        </Button>
+        <Button x:Name="btnAbout" TabIndex="10" Content="About" HorizontalAlignment="Left" Margin="161,365,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18"/>
+    </Grid>
+</Window>
